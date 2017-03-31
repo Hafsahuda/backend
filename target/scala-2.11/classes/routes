@@ -1,0 +1,80 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+#Restaurant
+POST     /restaurants                       controllers.RestaurantController.addRestaurant()
+PUT      /restaurants/:id                   controllers.RestaurantController.updateRestaurant(id:Integer)
+DELETE   /restaurants/:id                   controllers.RestaurantController.deleteRestaurant(id:Integer)
+GET      /restaurants                       controllers.RestaurantController.restaurantFilters()
+
+
+#Owner
+GET       /owners                           controllers.OwnerController.getAllOwners()
+POST      /owners                           controllers.OwnerController.addOwner()
+PUT       /owners                           controllers.OwnerController.updatePassword()
+DELETE    /owners                           controllers.OwnerController.deleteOwner()
+GET       /ownersRes                        controllers.OwnerController.getResByOwnerID()
+POST      /ownerSignIn                      controllers.OwnerController.signIn()
+GET       /ownerSignOut                     controllers.OwnerController.signOut()
+GET       /ownerByAuth                      controllers.OwnerController.getOwnerByAuthToken()
+POST      /forgotPwd                        controllers.OwnerController.forgotPwd()
+POST      /temPwd                           controllers.OwnerController.checkAns()
+GET       /verify                           controllers.OwnerController.verifyEmail()
+GET       /expired                          controllers.OwnerController.expiredOwner()
+
+#User
+GET        /users                           controllers.UserController.getAllUsers()
+POST       /users                           controllers.UserController.addUser()
+PUT        /users                           controllers.UserController.updatePassword()
+DELETE     /users                           controllers.UserController.deleteUser()
+POST       /userSignIn                      controllers.UserController.signIn()
+GET        /userSignOut                     controllers.UserController.signOut()
+GET        /userByAuth                      controllers.UserController.getUserByAuthToken()
+POST      /forgotPwdUser                    controllers.UserController.forgotPwd()
+POST      /temPwdUser                       controllers.UserController.checkAns()
+GET       /verifyUser                       controllers.UserController.verifyEmail()
+GET       /expiredUser                      controllers.UserController.expiredUser()
+
+
+#Cuisine
+GET        /cuisines                        controllers.CuisineController.getCuisines()
+
+#Area
+GET        /areas                           controllers.AreaController.getAreas()
+
+
+# Image controller
+
+POST      /images                            controllers.ImageController.uploadImage()
+GET       /images/:id                        controllers.ImageController.downloadImage(id: String)
+DELETE    /images/:id                        controllers.ImageController.deleteImage(id: String)
+
+#Ratings
+
+POST      /ratings                          controllers.RatingsController.addRating()
+GET       /ratings                          controllers.RatingsController.getRatingByUser()
+
+
+#Reviews
+POST      /reviews                          controllers.ReviewsController.addReview()
+GET       /reviews                          controllers.ReviewsController.getReviewsByUser()
+
+#Contact
+POST      /mail                             controllers.ContactController.sendMail()
+
+#Favourites
+POST      /favourites                       controllers.FavouritesController.addFavourite()
+GET       /favourites                       controllers.FavouritesController.getUserFavs()

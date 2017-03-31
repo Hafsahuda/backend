@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/hafsafatima/backendh/conf/application.conf,/Users/hafsafatima/backendh/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/hafsafatima/backendh/conf/logback.xml,/Users/hafsafatima/backendh/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/hafsafatima/backendh/conf/META-INF,/Users/hafsafatima/backendh/target/scala-2.11/classes/META-INF)[0m
+[0m[[0mdebug[0m] [0m	(/Users/hafsafatima/backendh/conf/routes,/Users/hafsafatima/backendh/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/hafsafatima/backendh/conf/META-INF/persistence.xml,/Users/hafsafatima/backendh/target/scala-2.11/classes/META-INF/persistence.xml)[0m
